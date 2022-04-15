@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analyzer</title>
+</head>
+
+<body>
+    <h1>Text Analyzer</h1>
+    <form action="/analyze" method="post" class="Text-form"> {% csrf_token %}
+        <textarea name="text" style="width: 1414px; height: 68px;"></textarea>
+        <div>
+            <input type="checkbox" id="contactChoice1" name="removepunc">
+            <label for="Choice1">Remove Punctuation</label>
+            <br><input type="checkbox" id="contactChoice2" name="capfirst">
+            <label for="Choice2">Capitalize First</label>
+            <br><input type="checkbox" id="contactChoice3" name="newlineremove">
+            <label for="Choice3">New Line Remove</label>
+            <br><input type="checkbox" id="contactChoice3" name="spaceremove">
+            <label for="Choice3">Space Remove</label>
+        </div>
+        <button>Remove Punctuations</button>
+    </form>
+</body>
+
+</html>
